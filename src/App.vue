@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TheSidebar/>
+  <RegexAssembly/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RegexAssembly from "@/components/RegexAssembly";
+import TheSidebar from "@/components/TheSidebar";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TheSidebar,
+    RegexAssembly,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+:root {
+  --accent-color: #6263D5;
+  --main-color: #E8EBF4;
+  --main2-color: #ffffff;
+  --text-color: #393939;
+  --text2-color: white;
+  --placeholder-color: #868686;
+
 }
+
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+}
+
+
 </style>
